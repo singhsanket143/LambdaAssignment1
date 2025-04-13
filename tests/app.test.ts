@@ -5,7 +5,8 @@ import request from 'supertest';
 import app from '../src/app';
 import fs from 'fs';
 import path from 'path';
-import { config } from '../src/config/server.config';
+//import { config } from '../src/config/server.config';
+import {config} from '../src/config/server.config';
 
 describe('Controller Structure', () => {
     const controllersDir = path.join(__dirname, '../src/controllers');
@@ -117,7 +118,7 @@ describe('Router Setup', () => {
 
 
 describe('Config Structure', () => {
-    const configFilePath = path.join(__dirname, '..src/config/server.config.ts');
+    const configFilePath = path.join(__dirname, '../src/config/server.config.ts');
   
     it('should have a config folder with server.config.ts file', () => {
       expect(fs.existsSync(configFilePath)).toBe(true);
